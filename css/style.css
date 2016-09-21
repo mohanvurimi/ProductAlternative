@@ -1,0 +1,50 @@
+      body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: small;
+        width:350px;
+        min-height:500px;
+        /*color:white;*/
+        background: linear-gradient(black, gray, black);
+      }
+      .divLink{
+        text-decoration:none;
+        cursor:pointer;
+        opacity:.5;
+        /*font-size:small;*/
+      }
+      .divLink:hover{
+        opacity:1;
+      }
+      .changeValueGreen{
+        background-color:rgb(76,217,99);
+      }
+      .changeValueRed{
+        background-color:rgb(254,58,47);
+      }
+      .table{
+        background-color: none;
+        margin-bottom: 0px;
+      }
+      .table th, .table td { 
+        border-top: none !important; 
+      }
+      .table-bordered th, .table-bordered td { 
+        border-top: none !important; 
+      }
+      a{
+        color:white; !imporatant
+      }
+      a:hover{
+        text-decoration:none; !imporatant
+      }
+      .table{
+        font-size: small;
+      }
+      .navigate{
+        color:white;
+        text-decoration:none;
+      }
+      .navigate:hover{
+        color:white;
+        text-decoration:none;
+      }

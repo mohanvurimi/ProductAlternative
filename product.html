@@ -1,0 +1,46 @@
+
+<html ng-app="productAlternativeApp" >
+  <head>
+    <title>Product Alternative</title>
+    <link rel="stylesheet" href="css/style.css"></link>
+    <link rel="stylesheet" href="css/bootstrap.min.css"></link>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script src="js/product.js"></script>
+  </head>
+  <body style="color:white;" ng-controller="productAlternativeController">
+    <div ng-if="message">{{message}}</div>
+    <table class="table table-bordered">
+      <tr ng-if="productData.ebay.name != undefined"><td colspan="2">Deal From Ebay</td></tr>
+      <tr ng-if="productData.ebay.name != undefined">
+        <td rowspan="2">
+          <a target="_blank" ng-href="{{productData.ebay.productURL}}">
+            <img width="120px" height="120px" ng-src="{{productData.ebay.image}}" alt="Ebay"/>
+          </a>
+        </td>
+        <td>
+          <a class="navigate" target="_blank" ng-href="{{productData.ebay.productURL}}">{{productData.ebay.name}}</a>
+        </td>
+      </tr>
+      <tr ng-if="productData.ebay.name != undefined">
+        <td>$ {{productData.ebay.price}}</td>
+      </tr>
+      <tr ng-if="productData.walmart.name != undefined"><td colspan="2">Deal From Walmart</td></tr>
+      <tr ng-if="productData.walmart.name != undefined">
+        <td rowspan="2">
+          <a target="_blank" ng-href="{{productData.walmart.productURL}}">
+            <img width="120px" height="120px" ng-src="{{productData.walmart.image}}" alt="Walmart"/>
+          </a>
+        </td>
+        <td>
+          <a class="navigate" target="_blank" ng-href="{{productData.walmart.productURL}}">{{productData.walmart.name}}</a>
+        </td>
+      </tr>
+      <tr ng-if="productData.walmart.name != undefined">
+        <td>$ {{productData.walmart.price}}</td>
+      </tr>
+    </table>
+  </body>
+</html>
+
