@@ -13,7 +13,7 @@
     //Get related product from ebay  	
     $scope.getAlternativeProductsFromEbay = function(title){
       var url = "http://svcs.ebay.com/services/search/FindingService/v1?OPERATION-NAME=findItemsByKeywords"+
-            "&SECURITY-APPNAME=MohanVur-pricemat-PRD-d9a6113c8-84226672&RESPONSE-DATA-FORMAT=json&keywords="+title;
+            "&SECURITY-APPNAME=Yourcode&RESPONSE-DATA-FORMAT=json&keywords="+title;
       $http.get(url).success(
         function(response,i){
           try{
@@ -45,7 +45,7 @@
     
     //Get relevant product from walmart
     $scope.getAlternativeProductsFromWalmart = function(title){
-      var url = "http://api.walmartlabs.com/v1/search?query="+title+"&format=json&apiKey=rnytbj5yxg3p3u84habhhr92";
+      var url = "http://api.walmartlabs.com/v1/search?query="+title+"&format=json&apiKey=yourkey";
       $http.get(url).success(
         function(response,i){
           var item;
